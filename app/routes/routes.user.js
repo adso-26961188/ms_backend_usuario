@@ -1,10 +1,11 @@
 import { Router } from "express"; //1 paso
-import { crearUsuario, eliminarUsuario, modificarUsuario, mostrarUsuario } from "../controllers/controllers.user.js";
+import { crearUsuario, eliminarUsuario, listarUsuario, modificarUsuario, mostrarUsuario } from "../controllers/controllers.user.js";
 
 const rutaUser = Router(); //2 paso
 
 //3Ger para mostar datos
-rutaUser.get("/user", mostrarUsuario);
+rutaUser.get("/user/:id", mostrarUsuario);
+rutaUser.get("/user", listarUsuario);
 
 // post sirve para guardar o crear
 // 201 es de creacion
