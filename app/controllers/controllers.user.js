@@ -1,4 +1,5 @@
 import { success } from "../message/browser.js";
+import pool from "../config/db.mysql.js";
 
 // Metodos a desarrolar en nustra ruta
 export const crearUsuario = (req, res)=>{
@@ -6,8 +7,11 @@ export const crearUsuario = (req, res)=>{
     console.log(dato);
     success(req, res, 201,"post Ha ingresado un dato");
 };
-export const mostrarUsuario =(req, res)=>{
-    success(req, res, 200,"Get: Conectado con Usuario");
+export const mostrarUsuario =  async(req, res)=>{
+    
+    const respuesta = await pool.query("select * from producto")
+    console.log(respuesta);
+    success(req, res, 200, respuesta);
 };
 export const modificarUsuario = (req, res)=>{
     const dato = req.body;
