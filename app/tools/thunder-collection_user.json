@@ -1,0 +1,28 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "user",
+    "collectionId": "2b8f795a-142f-41be-9200-630682bbe7ac",
+    "dateExported": "2024-04-25T16:54:45.921Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a8241384-ff9f-4457-a424-ab2b41adc298",
+            "colId": "2b8f795a-142f-41be-9200-630682bbe7ac",
+            "containerId": "",
+            "name": "http://localhost:9000/api/user",
+            "url": "http://localhost:9000/api/user",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-25T16:53:54.219Z",
+            "modified": "2024-04-25T16:53:54.219Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"becerra\",\n  \"apellido\":\"renteria\",\n  \"telefono\":23498479,\n  \"id\":1\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "MrW4Vi1hH2T7QKem4U6TOtnhHTUktna8CnpB53AXd2QhnZWtovkAP-YMI75cKD_L2E_RGSXp2DQUCxKHORbAJw"
+}
