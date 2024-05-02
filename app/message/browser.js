@@ -23,7 +23,7 @@ export const error = (req, res, status=500, mensaje="")=>{
 
     //estamos inicianizandole los parametros por defecto
         res.status(status).json({
-            error:false,
+            error:true,
             status:status,
             body:mensaje
         })
