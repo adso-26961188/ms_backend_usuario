@@ -1,5 +1,11 @@
 import { Router } from "express"; //1 paso
-import { crearUsuario, eliminarUsuario, listarUsuario, modificarUsuario, mostrarUsuario } from "../controllers/controllers.user.js";
+import { 
+    crearUsuario, 
+    eliminarUsuario, 
+    listarUsuario, 
+    modificarUsuario, 
+    mostrarUsuario, 
+    logueoUsuario} from "../controllers/controllers.user.js";
 
 const rutaUser = Router(); //2 paso
 
@@ -15,4 +21,7 @@ rutaUser.post("/user", crearUsuario);
 rutaUser.put("/user" , modificarUsuario);
 // borrar
 rutaUser.delete("/user", eliminarUsuario);
+
+// ÁRA LOGEARSE
+rutaUser.post("/login", logueoUsuario )
 export default rutaUser;

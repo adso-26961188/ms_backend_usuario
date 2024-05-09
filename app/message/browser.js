@@ -35,16 +35,3 @@ export const error = (req, res, status=500, mensaje="")=>{
 
 
 
-// export const messageDoctor = {
-//     nombre: "Eduardo",
-//     apellido:"Perez",
-//     edad:"45",
-//     especialidad:"Medicina General",
-// }
-
-// export const messagePatient = {
-//     nombre: "Maria",
-//     apellido:"Rodriguez",
-//     edad:"21",
-//     motivo:"Control mensual de Salud",
-// }
