@@ -6,6 +6,7 @@ import { error } from "../message/browser.js";
 config();
 
 export const verifyToken = async (req, res, next) => {
+    // x-access-token: POara capturar los tokens atraves de los headers
     const token = req.headers["x-access-token"];
     try {
         const valida = await jwt.verify(
