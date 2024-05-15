@@ -1,5 +1,9 @@
+// Proceso de implantacion
 {
     "presets": [
         "@babel/env"
+    ],
+    "plugins": [
+        "@babel/transform-runtime"
     ]
 }
