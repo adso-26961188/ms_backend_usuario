@@ -1,2 +1,4 @@
 node_modules
-.env
+# Si la subiremos pero no en este momento
+# app
+# .env

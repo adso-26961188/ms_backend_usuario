@@ -8,6 +8,7 @@ exports["default"] = void 0;
 var _express = _interopRequireDefault(require("express"));
 var _dotenv = require("dotenv");
 var _index = _interopRequireDefault(require("./routes/index.js"));
+var _dbMysql = _interopRequireDefault(require("./config/db.mysql.js"));
 (0, _dotenv.config)();
 var app = (0, _express["default"])();
 // mddleware
