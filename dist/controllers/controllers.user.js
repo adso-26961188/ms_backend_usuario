@@ -106,7 +106,7 @@ var mostrarUsuario = exports.mostrarUsuario = /*#__PURE__*/function () {
         case 4:
           respuesta = _context3.sent;
           console.log(respuesta);
-          (0, _browser.success)(req, res, 200, respuesta[0][0][0]);
+          (0, _browser.success)(req, res, 200, respuesta[0][0]);
           _context3.next = 12;
           break;
         case 9:

@@ -47,7 +47,7 @@ export const mostrarUsuario = async (req, res) => {
     try {
         const respuesta = await pool.query(`CALL sp_MostrarUsuario(${id});`);
         console.log(respuesta);
-        success(req, res, 200, respuesta[0][0][0]);
+        success(req, res, 200, respuesta[0][0]);
     } catch (err) {
         error(req, res, 500, err)
 
