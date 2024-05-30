@@ -35,18 +35,19 @@ export const listarUsuario = async(req, res) =>{
     try {
         const respuesta = await pool.query(`CALL sp_ListarUsuario(); `);
         console.log(respuesta);
-        success(req, res, 200, respuesta[0]);
+        success(req, res, 200, respuesta[0][0]);
     } catch (err) {
         error(req, res, 500, err)
 
     }
 }
+// MOSTRAR USUARIO
 export const mostrarUsuario = async (req, res) => {
     let id = req.params['id'];
     try {
         const respuesta = await pool.query(`CALL sp_MostrarUsuario(${id});`);
         console.log(respuesta);
-        success(req, res, 200, respuesta[0]);
+        success(req, res, 200, respuesta[0][0]);
     } catch (err) {
         error(req, res, 500, err)
 
@@ -72,6 +73,8 @@ export const modificarUsuario = async(req, res) => {
         error(req, res, 400, err)
     }
 };
+
+// ELIMINAR USUARIO
 export const eliminarUsuario = async(req, res) => {
     const id = req.body.id;
     try {
@@ -86,6 +89,8 @@ export const eliminarUsuario = async(req, res) => {
         error(req, res, 400, err);
     }
 };
+
+// LOGUEAR USUARIO
 // Una función “hash” criptográfica es, como su nombre lo indica,
 //  una función matemática utilizada en criptografía donde las más 
 // comunes agarran entradas de longitudes versátiles para restituir 

@@ -75,7 +75,7 @@ var listarUsuario = exports.listarUsuario = /*#__PURE__*/function () {
         case 3:
           respuesta = _context2.sent;
           console.log(respuesta);
-          (0, _browser.success)(req, res, 200, respuesta[0]);
+          (0, _browser.success)(req, res, 200, respuesta[0][0]);
           _context2.next = 11;
           break;
         case 8:
@@ -92,6 +92,7 @@ var listarUsuario = exports.listarUsuario = /*#__PURE__*/function () {
     return _ref2.apply(this, arguments);
   };
 }();
+// MOSTRAR USUARIO
 var mostrarUsuario = exports.mostrarUsuario = /*#__PURE__*/function () {
   var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res) {
     var id, respuesta;
@@ -105,7 +106,7 @@ var mostrarUsuario = exports.mostrarUsuario = /*#__PURE__*/function () {
         case 4:
           respuesta = _context3.sent;
           console.log(respuesta);
-          (0, _browser.success)(req, res, 200, respuesta[0]);
+          (0, _browser.success)(req, res, 200, respuesta[0][0]);
           _context3.next = 12;
           break;
         case 9:
@@ -161,6 +162,8 @@ var modificarUsuario = exports.modificarUsuario = /*#__PURE__*/function () {
     return _ref4.apply(this, arguments);
   };
 }();
+
+// ELIMINAR USUARIO
 var eliminarUsuario = exports.eliminarUsuario = /*#__PURE__*/function () {
   var _ref5 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(req, res) {
     var id, respuesta;
@@ -194,6 +197,8 @@ var eliminarUsuario = exports.eliminarUsuario = /*#__PURE__*/function () {
     return _ref5.apply(this, arguments);
   };
 }();
+
+// LOGUEAR USUARIO
 // Una función “hash” criptográfica es, como su nombre lo indica,
 //  una función matemática utilizada en criptografía donde las más 
 // comunes agarran entradas de longitudes versátiles para restituir 
