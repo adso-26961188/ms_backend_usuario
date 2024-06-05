@@ -1,14 +1,16 @@
 import express from "express";
 import { config } from "dotenv";
+import cors from "cors";
 import ruta from "./routes/index.js";
-import pool from "./config/db.mysql.js";
 config();
 
 
 const app = express();
+
 // mddleware
 app.use(express.json());
 app.use(express.urlencoded({ extended : true}));
+app.use(cors())
 
 app.set("port", process.env.PORT || 3000)
 
